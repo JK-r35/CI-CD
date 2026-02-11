@@ -42,15 +42,9 @@
 🌍 Architecture
 Developer → GitHub → GitHub Actions → EC2 → Docker → Live Website
 
-📷 Screenshots
 
 
 
 
 
-(Recruiters LOVE screenshots)
-
-🚀 Live Demo
-
-http://<your-ec2-public-ip>
 
