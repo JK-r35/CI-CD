@@ -1,10 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CI/CD Demo</title>
+    <meta charset="UTF-8">
+    <title>CI/CD Deployment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            width: 400px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #00c6ff;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello docker to ec2</h1>
-    <h2>Deployed using Docker + GitHub Actions</h2>
+
+    <div class="card">
+        <h1>🚀 CI/CD Pipeline Deployed Successfully!</h1>
+        <p>Your Docker container is running on AWS EC2.</p>
+        <a href="#" class="btn">View Project</a>
+        <div class="footer">
+            Built with Docker | Deployed via GitHub Actions
+        </div>
+    </div>
+
 </body>
 </html>
