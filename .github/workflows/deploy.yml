@@ -1,0 +1,25 @@
+name: CI-CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Build Docker Image
+      run: docker build -t simple-web .
+
+    - name: Login to DockerHub
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+    - name: Tag Image
+      run: docker tag simple-web ${{ secrets.DOCKER_USERNAME }}/simple-web:latest
+
+    - name: Push Image
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/simple-web:latest
